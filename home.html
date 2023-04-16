@@ -4,31 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nifty Thrifty</title>
+    <link rel="stylesheet" href="css/styles1.css">
+    <!--Bootstrap links for CSS and javascript, used to create the navbar-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="">home</a></li>
-        <li><a href="">Registration</a></li>
-        <li><a href="">login</a></li>
-        <li><a href="">Products</a></li>
-        <li><a href="">Checkout</a></li>
+    <!--Must include: 
+    1) One standalone image
+    2) Two paragraphs of Text
+    3) bulleted or numbered list with 2 list items
+    -->
+
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="product-listing.html">Products</a>
+        </li>
+        
     </ul>
-</nav>
+     <!--Login, registration & Cart in a list item dropdown, Right aligned on the navbar-->
+
+     <div class="dropdown dropstart text-end">
+        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+            <img width="20px" height="20px" src="images/right-to-bracket-light-theme.svg" alt="right-to-bracket_ login menu icon"> 
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="user-login.html">Log In</a></li>
+            <li><a class="dropdown-item" href="user-registration.html">Create an Account</a></li>
+            <li><a class="dropdown-item" href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 <h1>Welcome to Nifty Thrifty</h1>
 <h3>Your number one online thrift store!</h3>
-<img width="325px" height="380px" src="images/nifty-thrifty-home-image.png" alt="Nifty Thrifty homepage image clothing rack">
-
+    <!-- 1) One standalone image -->
+<img align="right" width="325px" height="380px" src="images/nifty-thrifty-home-image.png" alt="Nifty Thrifty homepage image clothing rack">
+    <!-- 2) Two paragraphs of Text -->
 <p>Nifty Thrifty is an online thrift store that fulfills all of your retail needs.
     On our site you'll find the best quality, gently used retail items. 
     You name it and we've got it, just review our product listing page to browse our retail items.
     Create an account with us to gain access to limited time deals and discounts. 
+    Just click on the 
+    <img width="30px" height="30px" src="images/right-to-bracket-solid.svg" alt="right-to-bracket_ login menu icon"> 
+    in the navigation bar.
 </p>
 
 <h2>Nifty Thrify Products</h3>
-<p>Listing of products includes(but not limited to):</p> 
+<p>Listing of products includes(but not limited to):</p>     
+<!-- 3) bulleted or numbered list with 2 list items-->
     <ul>
         <li>Clothes</li>
         <li>Shoes</li>
@@ -40,7 +71,7 @@
     We receive donations from far and wide with our ability to receive mail-in donations as well!
     We accept your gently used items and sell them right here on Nifty Thrifty.
     <br>
-    <em>Want to contribute to Nifty Thrify's inventory?</em> 
+    <strong>Want to contribute to Nifty Thrify's inventory?</strong> 
     <br>
     You can donate via mail or drive thru:
     <ol>
