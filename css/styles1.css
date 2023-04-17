@@ -1,0 +1,37 @@
+body {
+    background-color: blanchedalmond;
+}
+
+div.spacing {
+    padding-left: 100px; 
+    margin-top: 25px;
+    margin-right: 100px;
+}
+
+form.margins {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+/*here I'm using a child selector for all divs that are a child of the element with the grid-container class*/
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+.para-font {
+    font-family: Copperplate, fantasy;
+    font-size: medium;
+
+  }
