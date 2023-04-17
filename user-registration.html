@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
         <div class="container-fluid">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -32,7 +32,7 @@
     
          <div class="dropdown dropstart text-end">
             <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
-                <img width="20px" height="20px" src="images/right-to-bracket-light-theme.svg" alt="right-to-bracket_ login menu icon"> 
+                <img width="20" height="20" src="images/light-theme-loginicon.png" alt="right-to-bracket_ login menu icon"> 
             </button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="user-login.html">Log In</a></li>
@@ -42,23 +42,14 @@
           </div>
         </div>
       </nav>
-    <!--Must include: 
-        1) HTML Form w/ following fields
-            User name
-            Password
-            password confirmation
-            email 
-        2) Radio buttons w/ responses to the quetsion "how did you hear about us?"
-        3) HTML Validation attributes-->
     
-    <!-- 1) HTML Form w/ following fields: User name, Password, password confirmation
-            email -->
+    <!-- 1) HTML Form w/ following fields: User name, Password, password confirmation email -->
 
 <div>
     <h3>Registration</h3>
     <h5>Create your account here with Nifty Thrifty to access discounts and deals :D</h5>
 </div>
-<form class="margins" action="user-login.html">
+<form class="margins" action="user-login.html" name="user-registration">
     <div>
         <label for="username">Username</label>
         <input type="text" name="username" placeholder="input username"required>
@@ -66,6 +57,7 @@
 
     <div>
         <label for="Password">Password</label>
+            <!--  3) HTML Validation attributes used for required inputs and max length-->
         <input type="text" name="password" placeholder="input password" required maxlength="10">
     </div>
 
@@ -75,8 +67,10 @@
 
     <div>
         <label for="email"placeholder="input your email">Email Address</label>
-        <input type="email" errormessage="input a valid email">
+        <input type="email" errormessage="Please input a valid email">
     </div>
+
+    <button class="btn-primary btn">submit</button>
 
 </form>
 
