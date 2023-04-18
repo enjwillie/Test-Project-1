@@ -1,25 +1,35 @@
 body {
-    background-color: blanchedalmond;
+    background-color: rgb(246, 246, 245);
 }
 
 div.spacing {
-    padding-left: 100px; 
+    padding-left: 50px; 
     margin-top: 25px;
-    margin-right: 100px;
+    margin-right: 50px;
 }
 
 form.margins {
     margin-top: 100px;
     margin-left: 100px;
     margin-right: 100px;
-    padding: auto;
+}
+
+input[type=text]{
+  width: 50%;
+}
+
+input[type=password]{
+  width: 50%;
+}
+
+input[type=text]:focus{
+  border: 3px solid #0073f6;
 }
 
 .margins {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
-  padding: auto;
 }
 
 .grid-container {
@@ -40,7 +50,6 @@ form.margins {
 .para-font {
     font-family: Copperplate, fantasy;
     font-size: medium;
-
   }
 
 #bottom-align {
@@ -49,12 +58,11 @@ form.margins {
   flex-direction: column;
 }
 
-#align-middle {
+.align-middle {
 padding-top: 30%;
 display:block;
 align-content: center;
 align-items: center;
-
 }
 
 td > img{
@@ -62,14 +70,34 @@ td > img{
   height: 200px;
 }
 
-th {
-  column-width: 33%;
-}
-
 table {
   max-width: fit-content;
   border-color: darkblue;
   border-width: 5pt;
   border: solid;
+  background-color: #f4f5f6;
+  background-repeat: no-repeat;
 }
 
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Media queries to account for smaller screen sizes, removed images & smaller text sizes*/
+
+@media screen and (max-width:400px) {
+  img {
+display:none;
+}
+div {
+  padding-left: 10px; 
+  margin:auto;
+}
+p {
+font-size:xx-small;
+}
+
+h4 {
+font-size: small;
+}
+}
