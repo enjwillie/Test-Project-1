@@ -15,7 +15,7 @@ Project Description:
 - Media queries added for Max-width 400px to hide images, display smaller text, & remove margin on divs
 - Added Header, section, & main elements to each .html page
 - Additional success page shown on click of 'submit' on the cart/checkout page
--
+
 Images used by Site page:
 - Nifty Thrifty home page image
 -- ref:https://unsplash.com/photos/wV7UfVeI84w
