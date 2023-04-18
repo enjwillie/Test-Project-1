@@ -3,14 +3,19 @@
 
 Project Description:
 - Test site created as a thrift shop eCommerce site selling thrifted retail items online. Options to register, login, browse products & checkout.
-- Top navigation feature site navigation that highlights the users current location with a dropdown menu for options to access, login and registration pages.
-- Top navigation shows hidden pages when user is currently on the page
+- Top navigation created with Bootstrap that highlights the users current location, includes a dropdown menu for options to access the login and registration pages.
+- Top navigation also shows hidden pages when user is currently on the page
 - Products listing page features add to cart button
 - User Registration form fields submit button point to the login page
 - login page form fields and submit points to the home page
 - Cart on click of submit points to the checkout page, which has form fields that lead to a success page once the form is submitted
 - User Registration & login pages feature html form validations
-
+- bootstrap styling to forms on User Registration, Login, & checkout pages
+- Bug fixes based on W3C validation
+- Media queries added for Max-width 400px to hide images, display smaller text, & remove margin on divs
+- Added Header, section, & main elements to each .html page
+- Additional success page shown on click of 'submit' on the cart/checkout page
+-
 Images used by Site page:
 - Nifty Thrifty home page image
 -- ref:https://unsplash.com/photos/wV7UfVeI84w
@@ -27,6 +32,6 @@ Images used by Site page:
 - https://unsplash.com/photos/jvoZ-Aux9aw
 
 Featured HTML/CSS from this project
-- Top Navigation with Login, Registration & Cart icons 
-- The page the user is on shows in the navigation bar as active
-
+- Top Navigation with Login, Registration accessible via a login button right aligned on the top nav
+- highights to form inputs
+- navigation will always show the active page in the nav bar 
