@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles1.css">
-    <title>Cart</title>
-    <!--Bootstrap links for CSS and javascript, used to create the navbar-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!--Custom Stylesheet-->
-    <link rel="stylesheet" href="css/styles1.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create an Account!</title>
+  <link rel="stylesheet" href="css/styles1.css">
+  <!--Bootstrap links for CSS and javascript, used to create the navbar-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
   </head>
 <body>
   <header>
@@ -19,6 +18,7 @@
         
       <div class="container-fluid">
           <ul class="navbar-nav">
+
             <li class="nav-item">
               <a class="nav-link" href="home.html">Home</a>
             </li>
@@ -30,7 +30,7 @@
             <li class="nav-item">
               <a class="nav-link active" href="checkout.html">Cart</a>
             </li> 
-          
+
           </ul>
       <!--Login, registration & Cart in a list item dropdown, Right aligned on the navbar-->
         
@@ -47,25 +47,99 @@
     </nav>  
     
   </header>
-       <!-- 3) html table displaying 3 rows of sample data for items in the cart-->
   <main>
     <section>
-      <div class="spacing">
+      <!--Must include: 
+        1) HTML Form w/ the appropriate fields: input fields, select field & submit button
+        2) input fields have HTML validations i.e. required, max length
+
+        These forms are in modal windows, styled via bootstrap
+       -->
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Payment Info</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="checkout_success.html">
+
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="shipping-info" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Shipping Info</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form name="shipping-info">
+                  <div class="mb-3">
+                    <label class="col-form-label" for="fname">First Name *</label>
+                    <input class="form-control" type="text" id="fname" maxlength="10" required>
+                  </div>
+                  <div class="mt-3 mb-3">
+                    <label class="col-form-label" for="lname">Last Name *</label>
+                    <input class="form-control" type="text" id="lname" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="col-form-label" for="shipping">Shipping Address *</label>
+                    <input class="form-control" type="text" id="shipping" placeholder="input address" required>
+                  </div>       
+                  <div class="mb-3">
+                    <select  class="form-select" name="state" id="state">
+                      <option value="GA">Georgia</option>
+                      <option value="FL">Florida</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="default" selected disabled>-select state-</option>
+                    </select>
+                  </div>
+                  <input type="submit" value="submit" class="btn btn-secondary">
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="margins">
             <h1>Cart <img src="images/cart.svg" alt="card" width="35" height="35"></h1>
       </div>
-      <table class="margins">
+
+      <!--Buttons to access the Shipping & Card forms-->
+      <div class="margins">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#shipping-info">
+        Enter Shipping</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Enter Payment</button>
+      </div>
+
+      <!-- 3) table with 3 rows of sample data-->    
+      <table class="table margins">
         <thead>
           <tr>
-            <th>Item</th>
-            <th>Description</th>
-            <th>Price</th>
+            <th scope="col">Item</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
           </tr>
 
         </thead>
         <tbody>
           <tr>
             <td>    
-              <img class="card-img-top" src="/images/green-floral-jacket.png" alt="Card image" style="width:100%">
+              <img class="card-img" src="/images/green-floral-jacket.png" alt="Card image" style="width:100%">
             </td>
             <td>
               <p class="para-font">Womens Ladies Retro Floral Printing Zipper Up Jacket Casual 
@@ -78,7 +152,7 @@
 
           <tr>
             <td>
-              <img class="card-img-top" src="/images/ice-cream-nike.png" alt="Card image" style="width:100%">
+              <img class="card-img" src="/images/ice-cream-nike.png" alt="Card image" style="width:100%">
             </td>
             <td>
               <p class="para-font">AIR FORCE 1 '07, "Ice Cream" pastel colors with 
@@ -92,7 +166,7 @@
 
           <tr>
             <td>
-              <img class="card-img-top" src="/images/peach-bomber.png" alt="Card image" style="width:100%">
+              <img class="card-img" src="/images/peach-bomber.png" alt="Card image" style="width:100%">
             </td>
             <td>
               <p class="para-font"> Peach colored zip up bomber style jacket with pockets </p>
@@ -101,51 +175,16 @@
               <p>$20.00</p>
             </td>
           </tr>
+
+          <tr class="table-dark">
+            <td></td>
+            <td id="align-right">Total:</td>
+            <td>$75.00</td>
+          </tr>
         </tbody>
       </table>
     </section>
 
-    <section>
-      <!--Must include: 
-        1) HTML Form w/ the appropriate fields: input fields, select field & submit button
-        2) input fields have HTML validations i.e. required, max length
-       -->
-      <div class="container mt-3">
-        <h2>Shipping Information</h2>
-        <form action="checkout_success.html" name="shipping-info">
-        
-          <div class="mt-3 mb-3">
-            <label for="fname">First Name *</label>
-            <input type="text" id="fname" maxlength="10" required>
-          </div>
-
-          <div class="mt-3 mb-3">
-            <label for="lname">Last Name *</label>
-            <input type="text" id="lname" required>
-          </div>
-
-          <div class="mt-3 mb-3">
-            <label for="shipping">Shipping Address *</label>
-            <input type="text" id="shipping" placeholder="input address" required>
-          </div>
-        
-          <div class="mt-3 mb-3">
-            <select name="state" id="state">
-              <option value="GA">Georgia</option>
-              <option value="FL">Florida</option>
-              <option value="SC">South Carolina</option>
-              <option value="default" selected disabled>-select state-</option>
-
-            </select>
-          </div>
-    
-          <input type="submit" value="submit" class="btn btn-secondary">
- 
-        </form>
-
-      </div>
-
-    </section>
   </main>
 </body>
 </html>
