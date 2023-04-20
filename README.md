@@ -35,3 +35,18 @@ Featured HTML/CSS from this project
 - Top Navigation with Login, Registration accessible via a login button right aligned on the top nav
 - highights to form inputs
 - navigation will always show the active page in the nav bar 
+
+Nifty Thrifty Website pages:
+![image](https://user-images.githubusercontent.com/130867852/233379782-389303c1-bd08-4ec1-b048-e9380c7efac7.png)
+![image](https://user-images.githubusercontent.com/130867852/233379815-46e3143d-51bc-4bce-bb8a-e61ad4d5b664.png)
+![image](https://user-images.githubusercontent.com/130867852/233379863-62c1390c-c7d2-43c1-83e4-73db157abac8.png)
+<b>Shipping Info Modal <b>
+ ![image](https://user-images.githubusercontent.com/130867852/233380048-e7f76d8f-f9cb-4098-b1ec-383b45e314c9.png)
+<b> Registration & Login Pages <b>
+![image](https://user-images.githubusercontent.com/130867852/233380261-b1c1f417-11d0-46ce-8de9-b588d4a34583.png)
+![image](https://user-images.githubusercontent.com/130867852/233380348-4ee9abee-2cf9-4224-89f6-3f8267ce2cd3.png)
+
+
+
+
+
